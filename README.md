@@ -1,6 +1,13 @@
 # Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 项目概要：使用Python的scrapy框架从豆瓣评分前250名的电影进行数据采集，存入到Mysql数据库，使用Java提供后端接口，前端使用Vue3
+
+### 使用的编程语言：Python + Java + JavaScript
+
+### 框架：Python(scrapy)  Java(SpringBoot)  JavaScript(Vue3)
+
+### 这里只是电影项目的前端代码，手机端h5页面，使用Vite+Vue3脚手架构建
+
 
 ## Recommended IDE Setup
 
