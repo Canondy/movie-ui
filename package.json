@@ -8,10 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "vant": "^3.4.9",
     "vue": "^3.2.25"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
-    "vite": "^2.9.9"
+    "babel-plugin-import": "^1.13.5",
+    "vite": "^2.9.9",
+    "vite-plugin-style-import": "1.4.1"
   }
 }
