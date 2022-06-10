@@ -6,6 +6,10 @@ import Vant from 'vant'
 import "vant/lib/index.css"
 // 导入rem适配相关
 import "amfe-flexible"
+// 导入路由实例
+import router from "./router";
+
 createApp(App)
     .use(Vant)
+    .use(router)
     .mount('#app')
