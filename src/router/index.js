@@ -8,7 +8,7 @@ const routes = [
         // 路由规则名称
         name: 'login',
         // 导入对应的组件
-        component: () => import('../../src/views/login/index.vue')
+        component: () => import('../views/login/index.vue')
     }
 ]
 // 2.创建路由实例
