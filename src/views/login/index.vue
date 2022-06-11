@@ -34,6 +34,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import { Toast } from 'vant';
 // 模拟登录请求
 // 1.构建登录请求
 // 2.获取用户名和密码并发送到服务器端
@@ -43,11 +44,19 @@ const onSubmit = (values) => {
   // vant 自带
   // console.log('submit', values);
 
+  // 如果请求慢，添加加载信息
+  Toast.loading({
+    message: '登录中...',
+    forbidClick: true,
+    loadingType: 'spinner',
+  });
   // 模拟登录
   if(values.username == "zs" && values.password == "123"){
-    console.log("登录成功")
+    Toast.success('登录成功');
+    // console.log("登录成功")
   }else {
-    console.log("用户名或密码错误！！！")
+    Toast.fail('用户名或密码错误！！！');
+    // console.log("用户名或密码错误！！！")
   }
 };
 
