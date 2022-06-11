@@ -8,6 +8,8 @@ import "vant/lib/index.css"
 import "amfe-flexible"
 // 导入路由实例
 import router from "./router";
+// 导入全局样式
+import "./assets/styles/index.css";
 
 createApp(App)
     .use(Vant)
