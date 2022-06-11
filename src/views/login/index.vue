@@ -32,25 +32,17 @@
 
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
-export default {
-  name: "index.vue",
+// 模拟登录请求
+// 1.构建登录请求
+// 2.获取用户名和密码并发送到服务器端
+const username = ref('');
+const password = ref('');
+const onSubmit = (values) => {
+  console.log('submit', values);
+};
 
-  setup() {
-    const username = ref('');
-    const password = ref('');
-    const onSubmit = (values) => {
-      console.log('submit', values);
-    };
-
-    return {
-      username,
-      password,
-      onSubmit,
-    };
-  },
-}
 </script>
 
 <style scoped>
