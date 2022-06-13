@@ -8,14 +8,14 @@
   <van-form @submit="onSubmit">
     <van-cell-group inset>
       <van-field
-          v-model="username"
+          v-model="user.username"
           name="username"
           label="用户名"
           placeholder="用户名"
           :rules="userRules.username"
       />
       <van-field
-          v-model="password"
+          v-model="user.password"
           type="password"
           name="password"
           label="密码"
@@ -33,17 +33,23 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import {reactive, ref} from 'vue';
 import { Toast } from 'vant';
+//导入userStore
+import { useStore } from 'vuex';
 // 模拟登录请求
 // 1.构建登录请求
 // 2.获取用户名和密码并发送到服务器端
-const username = ref('');
-const password = ref('');
+const user = reactive({
+  username: '',
+  password: ''
+})
 const onSubmit = (values) => {
   // vant 自带
   // console.log('submit', values);
 
+  // 调用useStore
+  const store = useStore();
   // 如果请求慢，添加加载信息
   Toast.loading({
     message: '登录中...',
@@ -52,6 +58,8 @@ const onSubmit = (values) => {
   });
   // 模拟登录
   if(values.username == "zs" && values.password == "123"){
+    // 调用store容器
+    store.commit('setUser', res.data)
     Toast.success('登录成功');
     // console.log("登录成功")
   }else {

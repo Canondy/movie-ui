@@ -10,8 +10,10 @@ import "amfe-flexible"
 import router from "./router";
 // 导入全局样式
 import "./assets/styles/index.css";
-
+// 导入store实例 vuex
+import store from "./store";
 createApp(App)
     .use(Vant)
     .use(router)
+    .use(store)
     .mount('#app')
