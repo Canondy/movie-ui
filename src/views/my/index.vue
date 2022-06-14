@@ -3,7 +3,7 @@
   <div class="my-container">
     <div class="header not-login">
       <div class="login-btn" @click="this.$router.push('/login')">
-        <img class="mobile-img" src="../../assets/user.png" alt=""/>
+        <img class="mobile-img" src="src/assets/images/user.png" alt=""/>
         <span class="text">注册 / 登录</span>
       </div>
     </div>

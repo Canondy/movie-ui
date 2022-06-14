@@ -1,9 +1,10 @@
 <template>
   <!-- NavBar 导航栏 -->
-  <van-nav-bar
-      title="登录"
-      class="page-nav-bar"
-  />
+  <van-nav-bar title="登录" class="page-nav-bar">
+    <template #left>
+      <van-icon name="cross" size="18" @click="this.$router.back()"/>
+    </template>
+  </van-nav-bar>
   <!-- 表单 -->
   <van-form class="v-form" @submit="onSubmit">
     <van-cell-group inset>
