@@ -9,10 +9,6 @@
 
   <!-- 添加路由规则 -->
   <router-view></router-view>
-<!--  <router-link to="/" >首页</router-link>-->
-<!--  <router-link to="/login" >登录</router-link>-->
-<!--  <router-link to="/my" >我的</router-link>-->
-<!--  <router-link to="/order" >订单</router-link>-->
 </template>
 
 
