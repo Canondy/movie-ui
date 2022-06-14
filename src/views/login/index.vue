@@ -5,7 +5,7 @@
       class="page-nav-bar"
   />
   <!-- 表单 -->
-  <van-form @submit="onSubmit">
+  <van-form class="v-form" @submit="onSubmit">
     <van-cell-group inset>
       <van-field
           v-model="user.username"
@@ -24,7 +24,7 @@
       />
     </van-cell-group>
     <div style="margin: 16px;">
-      <van-button round block type="primary" native-type="submit">
+      <van-button class="v-btn" round block type="primary" native-type="submit">
         登录
       </van-button>
     </div>
@@ -76,5 +76,10 @@ const userRules = {
 </script>
 
 <style scoped>
-
+.v-form{
+  margin-top: 100px;
+}
+.v-btn{
+  margin-top: 100px;
+}
 </style>
