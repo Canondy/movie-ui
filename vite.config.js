@@ -9,7 +9,7 @@ import styleImport, { VantResolve } from 'vite-plugin-style-import';
 
 // 使用Vant组件时引入的
 export default {
-  devServer: {
+  server: {
     proxy: {
       '/wxapi': {
         target: 'http://localhost:8080',

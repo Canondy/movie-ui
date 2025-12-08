@@ -17,7 +17,7 @@ const routes = [
             },
             {
                 // 路径地址 空串标识默认 设置的子路由
-                path: '/',
+                path: '',
                 // 路由规则名称
                 name: 'home',
                 // 导入对应的组件
@@ -39,11 +39,19 @@ const routes = [
                 // 导入对应的组件
                 component: () => import('../views/order/index.vue')
             },
+            {
+                // 电影详情页路由
+                path: '/movie/:id',
+                // 路由规则名称
+                name: 'movieDetail',
+                // 导入对应的组件
+                component: () => import('../components/movie/MovieDetail.vue'),
+            },
         ]
     },
     {
-        // 路径地址 空串标识默认 设置的子路由
-        path: '/',
+        // 登录页路径
+        path: '/login',
         // 路由规则名称
         name: 'login',
         // 导入对应的组件
@@ -81,13 +89,4 @@ const router = createRouter({
 //     }
 // })
 
-// 检查登录状态的函数
-function checkAuthStatus() {
-    // 实际项目中可以从Vuex/Pinia或localStorage中获取
-    return !!localStorage.getItem('authToken') // 简单示例
-}
-
 export default router;
-// 3.创建登录组件
-
-// 4.指定出口

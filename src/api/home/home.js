@@ -8,3 +8,12 @@ export function listMovie(query) {
         params: query
     })
 }
+
+
+// 查询电影详情信息
+export function selectMovieDetailVoById(id) {
+    return request({
+        url: `/wxapi/detail/` + id,
+        method: 'get',
+    })
+}
