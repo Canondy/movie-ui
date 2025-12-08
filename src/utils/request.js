@@ -3,6 +3,7 @@ import axios from "axios"
 
 const request = axios.create({
     // 后端接口地址
-    baseURL: "http://localhost:8080"
+    baseURL: "http://localhost:8080",
+    headers: { 'Content-type': 'application/json' }
 })
 export default request

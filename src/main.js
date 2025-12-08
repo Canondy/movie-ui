@@ -7,11 +7,11 @@ import "vant/lib/index.css"
 // 导入rem适配相关
 import "amfe-flexible"
 // 导入路由实例
-import router from "./router";
+import router from "./router/index.js";
 // 导入全局样式
 import "./assets/styles/index.css";
 // 导入store实例 vuex
-import store from "./store";
+import store from "./store/index.js";
 createApp(App)
     .use(Vant)
     .use(router)

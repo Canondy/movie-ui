@@ -3,8 +3,8 @@
     <!-- 子路由的出口   -->
     <router-view></router-view>
     <!-- 构建标签导航栏   -->
-    <van-tabbar v-model="active">
-      <van-tabbar-item icon="home-o" to="/">首页</van-tabbar-item>
+    <van-tabbar v-model="active" fixed>
+      <van-tabbar-item icon="home-o" to="/home">首页</van-tabbar-item>
       <van-tabbar-item icon="cart-o" to="/order">订单</van-tabbar-item>
       <van-tabbar-item icon="contact" to="/my">我的</van-tabbar-item>
     </van-tabbar>

@@ -30,44 +30,55 @@
       </van-button>
     </div>
   </van-form>
-
 </template>
 
 <script setup>
 import {reactive, ref} from 'vue';
 import { Toast } from 'vant';
-//导入userStore
+import {useRouter} from "vue-router";
 import { useStore } from 'vuex';
+
 // 模拟登录请求
 // 1.构建登录请求
 // 2.获取用户名和密码并发送到服务器端
+
+const router = useRouter();
+
 const user = reactive({
   username: '',
   password: ''
 })
-const onSubmit = (values) => {
+
+
+
+function onSubmit  ()  {
   // vant 自带
-  // console.log('submit', values);
+  // console.log(user);
 
   // 调用useStore
-  const store = useStore();
+  // const store = useStore();
+
   // 如果请求慢，添加加载信息
-  Toast.loading({
-    message: '登录中...',
-    forbidClick: true,
-    loadingType: 'spinner',
-  });
+  // Toast.loading({
+  //   message: '登录中...',
+  //   forbidClick: true,
+  //   loadingType: 'spinner',
+  // });
+
   // 模拟登录
-  if(values.username == "zs" && values.password == "123"){
+  if(user.username === "zs" && user.password === "123"){
     // 调用store容器
-    store.commit('setUser', res.data)
-    Toast.success('登录成功');
-    // console.log("登录成功")
+    // store.commit('setUser', res.data)
+    // Toast.success('登录成功');
+    console.log("登录成功")
+    router.push({
+      path:"/in/home/index",
+    })
   }else {
     Toast.fail('用户名或密码错误！！！');
     // console.log("用户名或密码错误！！！")
   }
-};
+}
 
 // 添加表单校验规则
 const userRules = {
@@ -82,5 +93,8 @@ const userRules = {
 }
 .v-btn{
   margin-top: 100px;
+}
+.van-tabbar .van-tabbar--fixed .van-hairline--top-bottom .van-safe-area-bottom{
+  display: none;
 }
 </style>
