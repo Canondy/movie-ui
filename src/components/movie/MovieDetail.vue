@@ -35,20 +35,24 @@
           <h3 class="section-title">电影详情</h3>
           <div class="info-grid">
             <div class="info-item">
-              <span class="label">导演</span>
-              <span class="value">{{ movieDetail.director || '未知' }}</span>
-            </div>
-            <div class="info-item">
-              <span class="label">主演</span>
-              <span class="value">{{ movieDetail.starring || '未知' }}</span>
+              <span class="label">地区</span>
+              <span class="value">{{ movieDetail.country || '未知' }}</span>
             </div>
             <div class="info-item">
               <span class="label">类型</span>
               <span class="value">{{ movieDetail.movieType || '未知' }}</span>
             </div>
             <div class="info-item">
-              <span class="label">地区</span>
-              <span class="value">{{ movieDetail.country || '未知' }}</span>
+              <span class="label">主演</span>
+              <span class="value">{{ movieDetail.starring || '未知' }}</span>
+            </div>
+            <div class="info-item">
+              <span class="label">导演</span>
+              <span class="value">{{ movieDetail.director || '未知' }}</span>
+            </div>
+            <div class="info-item">
+              <span class="label">内容</span>
+              <span class="value">{{ movieDetail.movieContext || '未知' }}</span>
             </div>
           </div>
         </div>
@@ -225,7 +229,7 @@ onMounted(() => {
 }
 
 .movie-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 12px;
   color: #333;
@@ -253,7 +257,7 @@ onMounted(() => {
 .meta-tag {
   background-color: #f5f5f5;
   color: #666;
-  font-size: 13px;
+  font-size: 17px;
   padding: 4px 10px;
   border-radius: 4px;
   display: inline-flex;
@@ -271,7 +275,7 @@ onMounted(() => {
 }
 
 .movie-desc {
-  font-size: 14px;
+  font-size: 18px;
   color: #333;
   line-height: 1.8;
   padding: 12px;
@@ -288,7 +292,7 @@ onMounted(() => {
 }
 
 .section-title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: #333;
   margin-bottom: 15px;
@@ -305,7 +309,7 @@ onMounted(() => {
 .info-item {
   display: flex;
   border-bottom: 1px dashed #f0f0f0;
-  font-size: 14px;
+  font-size: 17px;
   transition: background-color 0.2s ease;
   padding: 10px 5px;
   border-radius: 4px;
@@ -326,19 +330,21 @@ onMounted(() => {
   font-weight: 500;
   display: flex;
   align-items: center;
+  font-size: 18px;
 }
 
 .info-item .value {
   color: #333;
   flex: 1;
-  line-height: 1.5;
+  line-height: 1.7;
   word-break: break-word;
+  font-size: 17px;
 }
 
 /* 添加响应式调整 */
 @media (max-width: 375px) {
   .movie-title {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .info-item .label {
