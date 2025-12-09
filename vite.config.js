@@ -1,5 +1,6 @@
 import vue from '@vitejs/plugin-vue'
 import styleImport, { VantResolve } from 'vite-plugin-style-import';
+import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 // 这个Vue3项目创建时引入的
@@ -33,4 +34,9 @@ export default {
       resolves: [VantResolve()],
     }),
   ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+    },
+  },
 };

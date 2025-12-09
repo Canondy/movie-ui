@@ -4,12 +4,12 @@
     <div class="back-button" @click="goBack">
       <van-icon name="arrow-left" size="24" />
     </div>
-    
+
     <div v-if="loading" class="loading-container">
       <van-loading type="spinner" color="#1989fa" size="36px" />
       <span class="loading-text">加载中...</span>
     </div>
-    
+
     <div v-else-if="movieDetail" class="detail-content">
       <!-- 电影海报 -->
       <div class="poster-section">
@@ -18,7 +18,7 @@
           {{ movieDetail.score }}
         </div>
       </div>
-      
+
       <!-- 电影信息 -->
       <div class="info-section">
         <h1 class="movie-title">{{ movieDetail.movieName }}</h1>
@@ -29,7 +29,7 @@
         <div class="movie-desc-wrapper">
           <p class="movie-desc">{{ movieDetail.desc || '暂无描述' }}</p>
         </div>
-        
+
         <!-- 其他信息 -->
         <div class="additional-info">
           <h3 class="section-title">电影详情</h3>
@@ -52,7 +52,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- 底部操作按钮 -->
         <div class="action-buttons">
           <van-button type="primary" size="large" class="action-btn">
@@ -64,7 +64,7 @@
         </div>
       </div>
     </div>
-    
+
     <div v-else class="empty-container">
       <van-empty description="未找到电影信息" />
     </div>
@@ -75,7 +75,7 @@
 import { ref, onMounted, reactive, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Icon, Loading, Empty, Button } from 'vant'
-import { selectMovieDetailVoById } from '../../api/home/home.js'
+import { selectMovieDetailVoById } from '@/api/home/home'
 
 const components = {
 [Icon.name]: Icon,
@@ -110,13 +110,13 @@ const getList = async () => {
     console.error('未提供电影ID')
     return
   }
-  
+
   loading.value = true
   try {
     // console.log('正在请求电影详情，ID:', id)
     const res = await selectMovieDetailVoById(id)
     // console.log('API响应结果:', res)
-    
+
     if (res && res.data) {
       movieDetail.value = res.data.data
       // console.log('成功获取电影详情:', movieDetail.value)
@@ -235,6 +235,7 @@ onMounted(() => {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   transition: color 0.2s ease;
 }
 
@@ -339,7 +340,7 @@ onMounted(() => {
   .movie-title {
     font-size: 22px;
   }
-  
+
   .info-item .label {
     width: 45px;
   }

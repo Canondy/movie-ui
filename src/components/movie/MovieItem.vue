@@ -111,6 +111,7 @@ const handleItemClick = () => {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  line-clamp: 1;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -122,6 +123,7 @@ const handleItemClick = () => {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.4;
