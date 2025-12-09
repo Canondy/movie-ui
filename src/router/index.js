@@ -56,29 +56,5 @@ const router = createRouter({
     // 指定路由规则
     routes,
 });
-// 在路由文件最后添加全局前置守卫
-// router.beforeEach((to, from, next) => {
-//
-//     // 2. 检查登录状态
-//     const isAuthenticated = checkAuthStatus() // 检查用户是否登录
-//
-//     // 3. 处理需要认证的路由
-//     if (to.meta.requiresAuth && !isAuthenticated) {
-//         // 如果需要登录但未登录，重定向到登录页
-//         // 携带redirect参数，以便登录后跳转回原页面
-//         next({
-//             name: 'Login',
-//             query: { redirect: to.fullPath }
-//         })
-//     }
-//     // 4. 已登录用户禁止访问登录页
-//     else if (to.name === 'Login' && isAuthenticated) {
-//         next({ name: 'Home' }) // 已登录用户直接跳转到首页
-//     }
-//     // 5. 其他情况正常放行
-//     else {
-//         next()
-//     }
-// })
 
 export default router;

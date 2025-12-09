@@ -26,9 +26,9 @@
 
 <script setup>
 import {onBeforeUnmount, onMounted, reactive, ref, toRefs} from 'vue';
-import ContentItem from './../../components/movie/MovieItem.vue';
+import ContentItem from '.@/components/movie/MovieItem.vue';
 import { NavBar, Tabbar, TabbarItem, Toast, Loading, Empty } from 'vant';
-import { listMovie } from '../../api/home/home';
+import { listMovie } from '@/api/home/home';
 
 const components = {
   ContentItem,

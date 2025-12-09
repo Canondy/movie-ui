@@ -11,8 +11,6 @@
     <div class="content-text">
       <div class="title">{{ item.movieName }} （{{ item.year }}）</div>
       <div class="description">{{ item.desc }}</div>
-      <!-- 添加年份信息 -->
-      <!-- <div v-if="item.year" class="year">{{ item.year }}</div> -->
     </div>
   </div>
 </template>
