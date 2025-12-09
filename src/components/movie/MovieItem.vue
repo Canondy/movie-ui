@@ -104,10 +104,10 @@ const handleItemClick = () => {
 }
 
 .title {
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 600;
   color: red;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -117,7 +117,7 @@ const handleItemClick = () => {
 }
 
 .description {
-  font-size: 12px;
+  font-size: 16px;
   color: #666;
   font-weight: bold;
   display: -webkit-box;
@@ -126,7 +126,7 @@ const handleItemClick = () => {
   line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.4;
+  line-height: 1.5;
   margin-bottom: 5px;
 }
 </style>
