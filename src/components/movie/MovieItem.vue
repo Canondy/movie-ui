@@ -41,7 +41,7 @@ const handleImageError = (event) => {
 const handleItemClick = () => {
   // 如果有电影ID，跳转到详情页
   if (props.item.id) {
-    console.log('查看电影详情:', props.item.movieName);
+    // console.log('查看电影详情:', props.item.movieName);
     // 路由跳转到电影详情页
     router.push({
       path: '/movie/detail',

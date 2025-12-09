@@ -67,7 +67,7 @@ function getList() {
   // 使用实际API调用
   // console.log('准备调用listMovie API，请求参数:', queryParams.value);
   listMovie(queryParams.value).then(response => {
-    console.log('API请求成功返回:', response);
+    // console.log('API请求成功返回:', response);
     // 检查响应数据格式
     if (response && response.data && response.data.rows) {
       // 为没有图片的电影添加默认海报

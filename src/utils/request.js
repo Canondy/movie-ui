@@ -11,7 +11,7 @@ const request = axios.create({
 request.interceptors.request.use(
   config => {
     // 详细记录请求信息，包括完整URL和请求方法
-    console.log('发起请求:', { url: config.url, method: config.method });
+    // console.log('发起请求:', { url: config.url, method: config.method });
     
     // 从localStorage获取用户信息，添加认证token
     const userInfo = localStorage.getItem('user')
@@ -30,12 +30,12 @@ request.interceptors.request.use(
     if (!config.url.startsWith('/') && !config.url.startsWith('http')) {
       const originalUrl = config.url;
       config.url = '/' + config.url;
-      console.log('调整请求路径格式:', originalUrl, '->', config.url);
+      // console.log('调整请求路径格式:', originalUrl, '->', config.url);
     }
     
     // 特别处理代理路径，确保正确转发到后端
     if (config.url.startsWith('/wxapi')) {
-      console.log('检测到wxapi路径，将通过vite代理转发到后端服务');
+      // console.log('检测到wxapi路径，将通过vite代理转发到后端服务');
     }
     
     return config;
@@ -49,7 +49,7 @@ request.interceptors.request.use(
 // 响应拦截器
 request.interceptors.response.use(
     response => {
-        console.log('请求成功:', response.config.url, response.status);
+        // console.log('请求成功:', response.config.url, response.status);
         return response;
     },
     error => {

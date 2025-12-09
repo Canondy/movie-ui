@@ -113,13 +113,13 @@ const getList = async () => {
   
   loading.value = true
   try {
-    console.log('正在请求电影详情，ID:', id)
+    // console.log('正在请求电影详情，ID:', id)
     const res = await selectMovieDetailVoById(id)
-    console.log('API响应结果:', res)
+    // console.log('API响应结果:', res)
     
     if (res && res.data) {
       movieDetail.value = res.data.data
-      console.log('成功获取电影详情:', movieDetail.value)
+      // console.log('成功获取电影详情:', movieDetail.value)
     } else {
       console.error('获取电影详情失败: 返回数据格式异常')
     }
@@ -135,7 +135,7 @@ watch(
     () => [route.query.id, route.params.id],
     ([newId]) => {
       if (newId) {
-        console.log('路由参数变化，重新获取电影详情:', newId)
+        // console.log('路由参数变化，重新获取电影详情:', newId)
         getList()
       }
     },
